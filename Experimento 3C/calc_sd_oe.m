@@ -16,8 +16,8 @@ B = [Km/A1; 0];
 C = [0 1];
 D = 0;
 % polos
-ps1 = -1; ps2 = -0.3+0.1i; ps3 = -0.3-0.1i;
-
+%ps1 = -1; ps2 = -0.3+0.1i; ps3 = -0.3-0.1i;
+ps1 = -1; ps2 = -0.656+0.656i; ps3 = -0.656-0.656i;
 % Projeto de um Seguidor de Degraus
 Aa = [0 -C;[0; 0] A];
 Ba = [0;B];
@@ -30,6 +30,7 @@ K2 = real([Ka(2) Ka(3)]);
 
 % polos
 po1= -0.1+0.1i; po2 = -0.1-0.1i;
+%po1= -0.5+0.5i; po2 = -0.5-0.5i;
 %Projeto seguidor de degraus
 delta_o = conv([1 -po1], [1 -po2]);
 qlA = A^2 + delta_o(2)*A + delta_o(3)*eye(size(A));
